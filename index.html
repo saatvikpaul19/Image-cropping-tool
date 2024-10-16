@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Annotation Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Cropping Tool</h1>
+
+        <!-- Controls above the canvas -->
+        <div id="controls-top">
+            <input type="file" id="imageUpload" accept="image/*">
+            <button id="zoomIn">Zoom In</button>
+            <button id="zoomOut">Zoom Out</button>
+            <button id="panMode">Pan Mode</button>
+            <button id="undo">Undo</button>
+            <button id="redo">Redo</button>
+            <button id="download">Download Cropped Images</button>
+        </div>
+
+        <!-- Canvas for image and annotation -->
+        <div class="canvas-container">
+            <canvas id="annotationCanvas"></canvas>
+        </div>
+
+        <!-- Reset buttons below the canvas -->
+        <div id="controls-bottom">
+            <button id="resetZoom">Reset Zoom</button>
+            <button id="resetPan">Reset Pan</button>
+            <button id="resetBoxes">Reset Bounding Boxes</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
